@@ -100,25 +100,23 @@
                 <div class="form-container">
                     <form>
                         <label for="name">Nome Completo</label>
-                        <input type="text" name="name" id="txtName" value="texto">
+                        <input type="text" name="name" id="txtName">
 
                         <label for="email">E-mail</label>
-                        <input type="email" name="email" id="txtEmail" value="texto">
+                        <input type="email" name="email" id="txtEmail">
 
                         <label for="level">Level</label>
-                        <input type="text" name="level" id="txtLevel" value="texto">
+                        <input type="text" name="level" id="txtLevel">
 
                         <label for="character">Personagem</label>
-                        <textarea name="character" value="texto" cols="30" rows="10" id="txtCharacter"></textarea>
-
+                        <textarea name="character" cols="30" rows="10" id="txtCharacter"></textarea>
                         <button type="button" id="btnSubscribe">Me inscrever</button>
                     </form>
-                    <script type="module" src="assets/js/main.js"></script>
                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer>
         <p>
             Projeto construído para fins didáticos, com o objetivo de colocar em
@@ -126,21 +124,23 @@
         </p>
         <img src="assets/images/footer/logo.svg" alt="">
     </footer>
-
+    
+    <script src="assets/js/main.js"></script>
+    
     <script>
         window.addEventListener('click', function () {
             const audio = document.getElementById('music');
             audio.play();
             audio.volume = 0.2;
         })
-
+        
         function switchTheme() {
             document.body.classList.toggle('dark-theme');
             document.body.classList.toggle('light-theme');
-
+            
             const theme = document.body.classList[0];
             const music = theme === 'light-theme' ? 'normal-world.mpeg' : 'inverted-world.mpeg'
-
+            
             const audio = document.getElementById('music');
             audio.src = `assets/musics/${music}`;
             audio.play();
